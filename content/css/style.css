@@ -1,0 +1,36 @@
+@font-face {
+	font-family: "eurobenne";
+	src: url('Stop-SC-D-OT_42559.ttf');
+}
+.eurofonts{
+	font-family: "eurobenne";
+}
+
+/* solve the sidenav overlay's problem : 
+	the problem was due to the fixed nav bar, 
+	just pull out side-nav content outside. */
+/* #sidenav-overlay {
+	z-index: 1;
+}*/
+
+/* override container */
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 80%;
+}
+
+/* Google Map Responsive*/
+.google-maps {
+    position: relative;
+    padding-bottom: 75%; // This is the aspect ratio
+    height: 0;
+    overflow: hidden;
+}
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}

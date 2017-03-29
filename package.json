@@ -1,0 +1,19 @@
+{
+  "name": "Eurobenne",
+  "version": "1.0.0",
+  "description": "Eurobenne's website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server"
+  },
+  "author": "JF Durand <@whispyy>",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8"
+  },
+  "devDependencies": {
+    "lite-server": "^2.2.2"
+  }
+}

@@ -1,0 +1,98 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col l7 m12 s12">
+      <div class="card">
+      	<div class="container">
+          <div class="row">
+              <div class="col m10 offset-m1 s12">
+                  <h2 class="center-align">Contactez nous</h2>
+                  <div class="row">
+                      <form class="col s12">
+                      	<!-- <div class="row">
+                              <div class="input-field col s12">
+                                <label><b>Votre demande concerne ?</b></label>
+                                <br/>
+                              </div>
+                              <div class="input-field col s6">
+                                <input name="group1" type="checkbox" id="infoProd" />
+                                <label for="google">Information sur les produits</label>
+                              </div>
+                              <div class="input-field col s6 ">
+                                <input name="group1" type="checkbox" id="infoEntreprise" />
+                                <label for="customer">Information sur l'entreprise</label>
+                              </div>
+                              <div class="input-field col s6 ">
+                                <input name="group1" type="checkbox" id="contactVente" />
+                                <label for="store">Contacter le service ventes</label>
+                              </div>
+                              <div class="input-field col s6 ">
+                                <input name="group1" type="checkbox" id="autre" />
+                                <label for="store">Autre demande</label>
+                              </div>
+                          </div> -->
+                          
+                          <div class="row">
+                              <div class="input-field col m6 s12">
+                                  <input id="first_name" type="text" class="validate"ng-model="vm.contact.prenom">
+                                  <label for="first_name">Prénom</label>
+                              </div>
+                              <div class="input-field col m6 s12">
+                                  <input id="last_name" type="text" class="validate" ng-model="vm.contact.nom">
+                                  <label for="last_name">Nom</label>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="input-field col m6 s12">
+                                  <i class="fa fa-envelope prefix"></i>
+                                  <input id="email" type="email" class="validate" required ng-model="vm.contact.email">
+                                  <label for="email">E-mail</label>
+                              </div>
+                              <div class="input-field col m6 s12">
+                                  <i class="fa fa-building prefix"></i>
+                                  <input id="company" type="text" class="validate" ng-model="vm.contact.societe">
+                                  <label for="company">Société</label>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="input-field col s12">
+                                  <i class="fa fa-phone prefix"></i>
+                                  <input id="phone" type="text" class="validate" ng-model="vm.contact.tel">
+                                  <label for="phone">Téléphone</label>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="input-field col s12">
+                                <textarea id="message" class="materialize-textarea" ng-model="vm.contact.message"></textarea>
+                                <label for="message">Message</label>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col m12">
+                               <p class="right-align"><button class="btn btn-large waves-effect waves-light" type="button" name="action" ng-click="vm.send()">Envoyer</button></p>
+                              </div>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col l5 m12 s12">
+      <map></map>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <h4>Envoyé  !</h4>
+    <p>Votre demande de contact à été envoyée !</p>
+  </div>
+  <div class="modal-footer">
+    <!-- <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Ok</a> -->
+    <button class="btn modal-action modal-close">Ok</button>
+  </div>
+</div>
