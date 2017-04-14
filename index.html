@@ -96,8 +96,11 @@
     </head>
     <body>
     	<!-- Google Tag Manager (noscript) -->
-		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WS9PTJ3"
-		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WS9PTJ3"
+				height="0" width="0" style="display:none;visibility:hidden">
+			</iframe>
+		</noscript>
 		<!-- End Google Tag Manager (noscript) -->
         <div class="topbar"></div>
         <div data-ng-view></div>
@@ -121,6 +124,15 @@
     }
     </script>
 
+    <!-- google optimize -->
+    <style>.async-hide { opacity: 0 !important} </style>
+	<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+	h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+	(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+	})(window,document.documentElement,'async-hide','dataLayer',4000,
+	{'GTM-5P2VGHZ':true});</script>
+
+	<!-- google analytics -->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -128,6 +140,7 @@
       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
       ga('create', 'UA-96364624-1', 'auto');
+      ga('require', 'GTM-5P2VGHZ');
       ga('send', 'pageview');
     </script>
     
