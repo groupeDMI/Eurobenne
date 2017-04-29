@@ -1,7 +1,7 @@
 <ul class="tabs blue darken-3 tabs-transparent">
-	<li class="tab"><a ng-click="vm.search=''">Toutes</a></li>
-	<li class="tab" ng-repeat="categorie in vm.categories">
-		<a ng-click="vm.search=categorie">{{categorie}}</a>
+	<li class="tab"><a data-ng-click="vm.search=''">Toutes</a></li>
+	<li class="tab" data-ng-repeat="categorie in vm.categories">
+		<a data-ng-click="vm.search=categorie">{{categorie}}</a>
 	</li>
 </ul>
 
@@ -11,19 +11,19 @@
 	<div class="row center">
 		<form class="search-wrapper card">
 			<div class="input-field">
-				<input id="search" type="search" ng-model="vm.search" placeholder="Rechercher une benne">
+				<input id="search" type="search" data-ng-model="vm.search" placeholder="Rechercher une benne">
 				<label class="label-icon" for="search"><i class="fa fa-search"></i></label>
 			</div>
 		</form>
 	</div>
 	<!-- toutes les bennes -->
-	<div ng-repeat="bs in vm.bennes | listToMatrix:3">
+	<div data-ng-repeat="bs in vm.bennes | listToMatrix:3">
 		<div class="row">
-		    <div class="col s12 m4" ng-repeat="b in bs | filter:vm.search">
+		    <div class="col s12 m4" data-ng-repeat="b in bs | filter:vm.search">
 				<div class="card">
 					<div class="card-image">
-						<img ng-src="{{b.img}}" height="160px">
-						<a class="btn-floating halfway-fab waves-effect waves-light blue darken-3" data-target="info" ng-click="vm.benneActive = b"><i class="fa fa-info"></i></a>
+						<img data-ng-src="{{b.img}}" height="160px">
+						<a class="btn-floating halfway-fab waves-effect waves-light blue darken-3" data-target="info" data-ng-click="vm.benneActive = b"><i class="fa fa-info"></i></a>
 					</div>
 					<div class="card-content">
 						<span class="card-title">{{b.nom}}</span>
@@ -45,11 +45,11 @@
 	  <h4>{{vm.benneActive.nom}}</h4>
 	  <div class="row">
 	  <ul cass="col s12">
-	  	<li><img class="responsive-img" ng-src="{{vm.benneActive.img}}"></li>
+	  	<li><img class="responsive-img" data-ng-src="{{vm.benneActive.img}}"></li>
 	  	<li>Catégorie : {{vm.benneActive.type}}</li>
-	  	<li ng-if="vm.benneActive.taille">Taille : {{vm.benneActive.taille}}</li>
-	  	<li ng-if="vm.benneActive.desc != ''">Description : {{vm.benneActive.desc}}</li>
-	  	<li ng-if="vm.benneActive.type2 != ''">Caractéristiques : {{vm.benneActive.type2}}</li>
+	  	<li data-ng-if="vm.benneActive.taille">Taille : {{vm.benneActive.taille}}</li>
+	  	<li data-ng-if="vm.benneActive.desc != ''">Description : {{vm.benneActive.desc}}</li>
+	  	<li data-ng-if="vm.benneActive.type2 != ''">Caractéristiques : {{vm.benneActive.type2}}</li>
 	  </ul>
 	  </div>
 	</div>

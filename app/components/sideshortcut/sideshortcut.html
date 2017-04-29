@@ -1,12 +1,17 @@
+
 <div class="col m3 hide-on-small-and-down">
   <ul class="collection with-header">
     <li class="collection-header blue darken-3">
       <h5 class="center white-text">Nos Bennes</h5>
     </li>
-    <li class="collection-item" ng-repeat="categorie in vm.categories">
-      <div class="title" ng-click="vm.goCat(categorie)">{{categorie}}</div>
+    <li class="collection-item" data-ng-repeat="categorie in vm.categories">
+      <div class="title" 
+      	   data-ng-click="vm.goCat(categorie)" 
+      	   style="cursor: pointer;">
+      	{{categorie}}
+      </div>
     </li>
-    <li class="collection-item"><a href="#!/bennes" ng-click="vm.resetSearch()">Tous nos produits...</a></li>
+    <li class="collection-item"><a href="#!/bennes" data-ng-click="vm.resetSearch()">Tous nos produits...</a></li>
   </ul>
 </div>
         

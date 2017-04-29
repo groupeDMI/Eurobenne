@@ -34,43 +34,50 @@
                           
                           <div class="row">
                               <div class="input-field col m6 s12">
-                                  <input id="first_name" type="text" class="validate"ng-model="vm.contact.prenom">
+                                  <input id="first_name" type="text" class="validate" data-ng-model="vm.contact.prenom">
                                   <label for="first_name">Prénom</label>
                               </div>
                               <div class="input-field col m6 s12">
-                                  <input id="last_name" type="text" class="validate" ng-model="vm.contact.nom">
+                                  <input id="last_name" type="text" class="validate" data-ng-model="vm.contact.nom">
                                   <label for="last_name">Nom</label>
                               </div>
                           </div>
                           <div class="row">
                               <div class="input-field col m6 s12">
                                   <i class="fa fa-envelope prefix"></i>
-                                  <input id="email" type="email" class="validate" required ng-model="vm.contact.email">
+                                  <input id="email" type="email" class="validate" required data-ng-model="vm.contact.email">
                                   <label for="email">E-mail</label>
                               </div>
                               <div class="input-field col m6 s12">
                                   <i class="fa fa-building prefix"></i>
-                                  <input id="company" type="text" class="validate" ng-model="vm.contact.societe">
+                                  <input id="company" type="text" class="validate" data-ng-model="vm.contact.societe">
                                   <label for="company">Société</label>
                               </div>
                           </div>
                           <div class="row">
                               <div class="input-field col s12">
                                   <i class="fa fa-phone prefix"></i>
-                                  <input id="phone" type="text" class="validate" ng-model="vm.contact.tel">
+                                  <input id="phone" type="text" class="validate" data-ng-model="vm.contact.tel">
                                   <label for="phone">Téléphone</label>
                               </div>
                           </div>
                           <div class="row">
                               <div class="input-field col s12">
-                                <textarea id="message" class="materialize-textarea" ng-model="vm.contact.message"></textarea>
+                                <textarea id="message" class="materialize-textarea" data-ng-model="vm.contact.message"></textarea>
                                 <label for="message">Message</label>
                               </div>
                           </div>
                           <div class="row">
                               <div class="col m12">
-                               <p class="right-align"><button class="btn btn-large waves-effect waves-light" type="button" name="action" ng-click="vm.send()">Envoyer</button></p>
+                               <p class="right-align"
+                                   data-ng-if="!vm.loading">
+                                <button class="btn btn-large waves-effect waves-light" type="button" name="action" data-ng-click="vm.send()">Envoyer</button>
+                               </p>
                               </div>
+                          </div>
+                          <div class="progress" 
+                               data-ng-if="vm.loading">
+                            <div class="indeterminate"></div>
                           </div>
                       </form>
                   </div>
@@ -93,6 +100,9 @@
   </div>
   <div class="modal-footer">
     <!-- <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Ok</a> -->
-    <button class="btn modal-action modal-close">Ok</button>
+    <button class="btn modal-action modal-close" 
+            data-ng-click="$parent.vm.loading = false;">
+            Ok
+    </button>
   </div>
 </div>
