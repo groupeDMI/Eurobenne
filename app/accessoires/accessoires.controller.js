@@ -1,22 +1,25 @@
-(function(){
-    'use strict';
-    
-    angular
-    .module('fjs.accessoires')
-    .controller('AccessoiresController', accessoiresController);
-    
-    accessoiresController.$inject = ['accessoires'];
+class accessoiresController {
+    constructor(accessoires) {
+        this.accessoires = accessoires.getAccess();
+        this.search;
+        this.activeAccessoire;
 
-    function accessoiresController(accessoires) {
-        var vm = this;
-        
-        vm.access = accessoires.getAccess();
-        vm.search;
-        vm.accessActive;
+        this.$onInit();
+    }
+
+    $onInit() {
         $(document).ready(function(){
           // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
           $('.modal').modal();
-        });
+        }); 
     }
-    
-})();
+
+
+}
+
+
+angular
+.module('fjs.accessoires')
+.controller('AccessoiresController', accessoiresController);
+
+//accessoiresController.$inject = ['accessoires'];

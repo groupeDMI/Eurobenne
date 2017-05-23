@@ -7,7 +7,9 @@
     <li class="collection-item" data-ng-repeat="categorie in vm.categories">
       <div class="title" 
       	   data-ng-click="vm.goCat(categorie)" 
-      	   style="cursor: pointer;">
+      	   style="cursor: pointer;"
+           role="button"
+           tabindex="0">
       	{{categorie}}
       </div>
     </li>

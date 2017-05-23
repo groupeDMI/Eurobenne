@@ -22,9 +22,13 @@
     function sliderDirectiveController() {
         var vm = this;
 
-        //init the slider        
+        //init the slider
         $('.carousel.carousel-slider').carousel({fullWidth: true});
         
+        setInterval(function() {
+            $('.carousel').carousel('next');
+        }, 5000);
+
     }
     
 })();

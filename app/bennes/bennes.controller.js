@@ -1,30 +1,27 @@
-(function(){
-    'use strict';
-    
-    angular
-    .module('fjs.bennes')
-    .controller('BennesController', bennesController);
-    
-    bennesController.$inject = ['bennes', '$rootScope'];
+class bennesController {
+    constructor(bennes, $rootScope) {
+        this.search = $rootScope.search;
+        this.bennes = bennes.getBennes();
+        this.categories = bennes.getCategories();
+        this.benneActive;
 
-    function bennesController(bennes, $rootScope) {
-        var vm = this;
-        
-        vm.search = $rootScope.search;
-
-        vm.categories = bennes.getCategories();
-        vm.bennes = bennes.getBennes();
-
-        vm.selectCat = function(cat){
-            vm.search = cat;
-        }
-        
-        vm.benneActive;
-        $(document).ready(function(){
-          // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-          $('.modal').modal();
-        });
-          
+        this.$onInit();
     }
-    
-})();
+
+    $onInit() {
+        $(document).ready(function(){
+            $('.modal').modal();
+        });
+    }
+
+    selectCat(cat) {
+        this.search = cat;
+    }
+}
+
+
+angular
+.module('fjs.bennes')
+.controller('BennesController', bennesController);
+
+//bennesController.$inject = ['bennes', '$rootScope'];

@@ -1,14 +1,6 @@
-(function(){
-    'use strict';
-    
-    angular
-    .module('fjs.home')
-    .controller('HomeController', homeController);
-    
-    function homeController($filter) {
-        var vm = this;
-        
-        vm.icons = [
+class homeController {
+    constructor() {
+        this.icons = [
             {
                 title: 'Production',
                 text: 'Une production de 1000 Bennes par an en 2x8 et jusqu\'à 1500 Bennes en 3x8.',
@@ -25,7 +17,11 @@
                 img: 'fa fa-truck fa-5x'
             }
         ];
-        
     }
+}
+
     
-})();
+angular
+.module('fjs.home')
+.controller('HomeController', homeController);
+    
