@@ -14,8 +14,8 @@
 				<div class="col s12 m4 center" data-ng-repeat="icon in vm.icons">
 					<!-- <img src="{{icon.img}}" width="100%"> -->
 					<i class="{{icon.img}}"></i>
-					<h5>{{icon.title}}</h5>
-					<p>{{icon.text}}</p>
+					<h5 data-ng-bind="icon.title"></h5>
+					<p data-ng-bind="icon.text"></p>
 				</div>
 		  </div>
 		  <br />

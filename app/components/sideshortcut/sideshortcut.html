@@ -9,8 +9,8 @@
       	   data-ng-click="vm.goCat(categorie)" 
       	   style="cursor: pointer;"
            role="button"
-           tabindex="0">
-      	{{categorie}}
+           tabindex="0"
+           data-ng-bind="categorie">
       </div>
     </li>
     <li class="collection-item"><a href="#!/bennes" data-ng-click="vm.resetSearch()">Tous nos produits...</a></li>

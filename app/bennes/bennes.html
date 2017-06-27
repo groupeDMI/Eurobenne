@@ -26,8 +26,9 @@
 						<a class="btn-floating halfway-fab waves-effect waves-light blue darken-3" data-target="info" data-ng-click="vm.benneActive = b"><i class="fa fa-info"></i></a>
 					</div>
 					<div class="card-content">
-						<span class="card-title">{{b.nom}}</span>
-						<p>{{b.type}}</p><p>{{b.taille}}</p>
+						<span class="card-title" data-ng-bind="b.nom"></span>
+						<p data-ng-bind="b.type"></p>
+						<p data-ng-bind="b.taille"></p>
 					</div>
 					<!-- <div class="card-action">
 						<a href="#">This is a link</a>
@@ -42,7 +43,7 @@
 <div id="info" class="modal modal-fixed-footer">
 	<div class="modal-content center">
 	  
-	  <h4>{{vm.benneActive.nom}}</h4>
+	  <h4 data-ng-bind="vm.benneActive.nom"></h4>
 	  <div class="row">
 	  <ul cass="col s12">
 	  	<li><img class="responsive-img" data-ng-src="{{vm.benneActive.img}}"></li>

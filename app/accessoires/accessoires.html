@@ -3,7 +3,7 @@
 	<div class="row center">
 		<form class="search-wrapper card">
 			<div class="input-field">
-				<input id="search" type="search" ng-model="vm.search" placeholder="Rechercher une benne">
+				<input id="search" type="search" data-ng-model="vm.search" placeholder="Rechercher une benne">
 				<label class="label-icon" for="search"><i class="fa fa-search"></i></label>
 			</div>
 		</form>
@@ -13,12 +13,12 @@
 		    <div class="col s12 m4" ng-repeat="a in as | filter:vm.search">
 				<div class="card">
 					<div class="card-image">
-						<img ng-src="{{a.img}}" height="160px">
+						<img data-ng-src="{{a.img}}" height="160px">
 						<a class="btn-floating halfway-fab waves-effect waves-light blue darken-3" data-target="info" ng-click="vm.activeAccessoire = a"><i class="fa fa-info"></i></a>
 					</div>
 					<div class="card-content">
-						<span class="card-title">{{a.nom}}</span>
-						<p>{{a.type}}</p>
+						<span class="card-title" data-ng-bind="a.nom"></span>
+						<p data-ng-bind="a.type"></p>
 					</div>
 					<!-- <div class="card-action">
 						<a href="#">This is a link</a>
@@ -35,10 +35,10 @@
 <div id="info" class="modal modal-fixed-footer">
 	<div class="modal-content center">
 	  
-	  <h4>{{vm.activeAccessoire.nom}}</h4>
+	  <h4 data-ng-bind="vm.activeAccessoire.nom"></h4>
 	  <div class="row">
 	  <ul cass="col s12">
-	  	<li><img class="responsive-img" ng-src="{{vm.activeAccessoire.img}}"></li>
+	  	<li><img class="responsive-img" data-ng-src="{{vm.activeAccessoire.img}}"></li>
 	  	<li>Catégorie : {{vm.activeAccessoire.type}}</li>
 	  	<li ng-if="vm.activeAccessoire.desc != ''">Description : {{vm.activeAccessoire.desc}}</li>
 	  </ul>
