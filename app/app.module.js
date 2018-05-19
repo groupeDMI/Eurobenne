@@ -10,6 +10,7 @@
         'fjs.bennes',
         'fjs.contact',
         'fjs.accessoires',
+        'fjs.burton',
         'fjs.components'
     ]);
     

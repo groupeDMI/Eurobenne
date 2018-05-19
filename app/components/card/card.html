@@ -1,7 +1,7 @@
 <div class="card-panel"
      ng-class="{'small' : $ctrl.size == 'small'} ">
     <div class="row">
-        <h3 class="center" ng-bind="$ctrl.title"></h3>
+        <h3 class="center" ng-if="!!$ctrl.title" ng-bind="$ctrl.title"></h3>
         <ng-transclude></ng-transclude>
     </div>
 </div>
