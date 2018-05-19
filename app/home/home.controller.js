@@ -22,6 +22,6 @@ class homeController {
 
     
 angular
-.module('fjs.home')
-.controller('HomeController', homeController);
+    .module('fjs.home')
+    .controller('HomeController', homeController);
     

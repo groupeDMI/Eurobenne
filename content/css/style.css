@@ -20,17 +20,23 @@
   width: 80%;
 }
 
+/* paragraph typo */
+.paragraph {
+  text-align: justify;
+  line-height: 1.8;
+}
+
 /* Google Map Responsive*/
 .google-maps {
-    position: relative;
-    padding-bottom: 75%; // This is the aspect ratio
-    height: 0;
-    overflow: hidden;
+  position: relative;
+  padding-bottom: 75%; // This is the aspect ratio
+  height: 0;
+  overflow: hidden;
 }
 .google-maps iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100% !important;
-    height: 100% !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
 }

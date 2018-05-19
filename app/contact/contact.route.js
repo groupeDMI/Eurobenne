@@ -7,7 +7,7 @@
     
     contactRouting.$inject = ['$routeProvider'];
     
-    function contactRouting($routeProvider) {
+    function contactRouting ($routeProvider) {
         $routeProvider.when('/contact', {
            controller: 'ContactController',
            controllerAs: 'vm',
