@@ -3,11 +3,7 @@
     
     angular
     .module('fjs.core')
-    .run(function($rootScope){
-    	$rootScope.search;
-    })
-    // .config(function($locationProvider){
-    // 	$locationProvider.html5Mode(true);
-    // })
+    .config($locationProvider => $locationProvider.html5Mode(true).hashPrefix(""))
+    .run($rootScope => { $rootScope.search; })
     
 })();
