@@ -17,7 +17,7 @@ class contactController {
     send(){
         this.loading = true;
 
-        emailjs.send("yandex","eurobenne",this.contact)
+        emailjs.send("yandex","eurobenne", this.contact)
             .then(response => {
                console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
                $('#modal1').modal('open');

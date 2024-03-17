@@ -22,6 +22,7 @@
     function footerDirectiveController() {
         var vm = this;
         
+        vm.date = Date.now()
     }
     
 })();
