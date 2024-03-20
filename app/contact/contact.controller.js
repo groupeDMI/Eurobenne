@@ -11,13 +11,15 @@ class contactController {
         $(document).ready(function(){
             $('.modal').modal();
         });
-        emailjs.init("user_bohF04q3pAPOijmAfMD5u");
+        emailjs.init({
+            publicKey: 'EVJLqezBwf9nsoux0',
+        });
     }
 
     send(){
         this.loading = true;
 
-        emailjs.send("yandex","eurobenne",this.contact)
+        emailjs.send("service_r05mq3p","template_v57ew7j", this.contact)
             .then(response => {
                console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
                $('#modal1').modal('open');
